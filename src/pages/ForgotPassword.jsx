@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import Gauth from '../components/Gauth';
-
+import { toast } from "react-toastify";
+import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 
 export default function ForgotPassword() {
     
@@ -9,6 +10,16 @@ export default function ForgotPassword() {
     
     function onChange(e){
         setEmail(e.target.value)
+    }
+    async function onSubmit(e){
+        e.preventDefault()
+        try {
+            const auth = getAuth();
+            await sendPasswordResetEmail(auth, email);
+            toast.success("Email was sent");
+          } catch (error) {
+            toast.error("Account does not exist");
+          }
     }
   return (
     <section>
@@ -21,7 +32,7 @@ export default function ForgotPassword() {
             </img>
             </div>
             <div className='w-full md:w-[70%] lg:w-[40%] lg:ml-5'>
-                <form >
+                <form  onSubmit={onSubmit}>
                     <input 
                     type='email' 
                     className='w-full mb-6 px-4 py-2 text-xl text-gray-700 bg-white border-gray-300 rounded transition ease-in-out' 
