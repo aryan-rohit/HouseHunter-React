@@ -23,8 +23,7 @@ import {
 } from "react-icons/fa";
 import { getAuth } from "firebase/auth";
 import Contact from '../components/Contact';
-// import Contact from "../components/Contact";
-// import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
 export default function Listing() {
     const auth = getAuth();
@@ -152,9 +151,9 @@ export default function Listing() {
           )}
         </div>
         <div className="w-full h-[200px] md:h-[400px] z-10 overflow-x-hidden mt-6 md:mt-0 md:ml-2">
-          {/* <MapContainer
+          <MapContainer
             center={[listing.geolocation.lat, listing.geolocation.lng]}
-            zoom={13}
+            zoom={6}
             scrollWheelZoom={false}
             style={{ height: "100%", width: "100%" }}
           >
@@ -169,7 +168,7 @@ export default function Listing() {
                 {listing.address}
               </Popup>
             </Marker>
-          </MapContainer> */}
+          </MapContainer>
         </div>
       </div>
       
