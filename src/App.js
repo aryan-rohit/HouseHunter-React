@@ -12,6 +12,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import EditListing from "./pages/EditListing";
 import Listing from "./pages/Listing";
+import Category from "./pages/Category";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <Route path="/edit-listing/:listingId" element={<EditListing />} />
           </Route>
           <Route path="/offers" element={<Offers/>}></Route>
+          <Route path="/category/:categoryName" element={<Category />} />
           <Route
             path="/category/:categoryName/:listingId"
             element={<Listing />}
@@ -40,7 +42,7 @@ function App() {
         </Routes>
       </Router>
       <ToastContainer
-      position="top-right"
+      position="top-center"
       autoClose={5000}
       hideProgressBar={false}
       newestOnTop={false}

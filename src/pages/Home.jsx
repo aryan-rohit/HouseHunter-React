@@ -2,7 +2,6 @@ import React from 'react'
 import Slider from '../components/Slider'
 import {
   collection,
-  getDoc,
   getDocs,
   limit,
   orderBy,
@@ -14,6 +13,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import ListingItem from "../components/ListingItem";
 import { db } from "../firebase";
+import Footer from '../components/Footer';
 
 export default function Home() {
   const [offerListings, setOfferListings] = useState(null);
@@ -75,7 +75,7 @@ export default function Home() {
     }
     fetchListings();
   }, []);
-  // Places for rent
+  // Places for sale
   const [saleListings, setSaleListings] = useState(null);
   useEffect(() => {
     async function fetchListings() {
@@ -167,6 +167,7 @@ export default function Home() {
           </div>
         )}
       </div>
+      <Footer/>
     </div>
   )
 }
