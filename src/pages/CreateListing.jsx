@@ -29,10 +29,10 @@ export default function CreateListing() {
         address: "",
         description: "",
         offer: false,
-        regularPrice: 0,
-        discountedPrice: 0,
-        latitude: 0,
-        longitude: 0,
+        regularPrice: 1,
+        discountedPrice: 1,
+        latitude: 1,
+        longitude: 1,
         images: {},
       });
       const {
@@ -172,7 +172,7 @@ export default function CreateListing() {
             className={`mr-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition duration-150 ease-in-out w-full ${
               type === "rent"
                 ? "bg-white text-black"
-                : "bg-slate-600 text-white"
+                : "bg-green-800 text-white"
             }`}
           >
             sell
@@ -185,13 +185,13 @@ export default function CreateListing() {
             className={`ml-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition duration-150 ease-in-out w-full ${
               type === "sale"
                 ? "bg-white text-black"
-                : "bg-slate-600 text-white"
+                : "bg-green-800 text-white"
             }`}
           >
             rent
           </button>
         </div>
-        <p className="text-lg mt-6 font-semibold">Name</p>
+        <p className="text-lg mt-6 font-semibold">Name of Property</p>
         <input
           type="text"
           id="name"
@@ -239,7 +239,7 @@ export default function CreateListing() {
             value={true}
             onClick={onChange}
             className={`mr-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition duration-150 ease-in-out w-full ${
-              !parking ? "bg-white text-black" : "bg-slate-600 text-white"
+              !parking ? "bg-white text-black" : "bg-green-800 text-white"
             }`}
           >
             Yes
@@ -250,7 +250,7 @@ export default function CreateListing() {
             value={false}
             onClick={onChange}
             className={`ml-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition duration-150 ease-in-out w-full ${
-              parking ? "bg-white text-black" : "bg-slate-600 text-white"
+              parking ? "bg-white text-black" : "bg-green-800 text-white"
             }`}
           >
             no
@@ -264,7 +264,7 @@ export default function CreateListing() {
             value={true}
             onClick={onChange}
             className={`mr-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition duration-150 ease-in-out w-full ${
-              !furnished ? "bg-white text-black" : "bg-slate-600 text-white"
+              !furnished ? "bg-white text-black" : "bg-green-800 text-white"
             }`}
           >
             yes
@@ -275,7 +275,7 @@ export default function CreateListing() {
             value={false}
             onClick={onChange}
             className={`ml-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition duration-150 ease-in-out w-full ${
-              furnished ? "bg-white text-black" : "bg-slate-600 text-white"
+              furnished ? "bg-white text-black" : "bg-green-800 text-white"
             }`}
           >
             no
@@ -321,7 +321,7 @@ export default function CreateListing() {
             </div>
           </div>
         )}
-        <p className="text-lg font-semibold">Description</p>
+        <p className="text-lg font-semibold">Description of Property</p>
         <textarea
           type="text"
           id="description"
@@ -339,7 +339,7 @@ export default function CreateListing() {
             value={true}
             onClick={onChange}
             className={`mr-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition duration-150 ease-in-out w-full ${
-              !offer ? "bg-white text-black" : "bg-slate-600 text-white"
+              !offer ? "bg-white text-black" : "bg-green-800 text-white"
             }`}
           >
             yes
@@ -350,7 +350,7 @@ export default function CreateListing() {
             value={false}
             onClick={onChange}
             className={`ml-3 px-7 py-3 font-medium text-sm uppercase shadow-md rounded hover:shadow-lg focus:shadow-lg active:shadow-lg transition duration-150 ease-in-out w-full ${
-              offer ? "bg-white text-black" : "bg-slate-600 text-white"
+              offer ? "bg-white text-black" : "bg-green-800 text-white"
             }`}
           >
             no

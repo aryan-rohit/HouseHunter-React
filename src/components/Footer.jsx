@@ -8,9 +8,9 @@ export default function Footer() {
     <div className='bg-white border-b shadow-md sticky top-0 z-40'>
       <footer className=' flex flex-col items-center w-full px-4 max-w-6xl mx-auto'>
       {/* <h1 className="text-3xl text-center mt-6 font-bold mb-6">About Us</h1> */}
-        <div className="text-3xl text-center mt-6 font-bold mb-6">
-            <ul className='flex space-x-10'>
-            <li><a href='https://www.instagram.com/aryan_kumar1203/'>
+        <div className="text-3xl text-center mt-5 font-bold">
+            <ul className='flex space-x-10 '>
+            <li ><a href='https://www.instagram.com/aryan_kumar1203/'>
             <FaInstagram className="text-lg mr-1 text-blue-600 cursor-pointer font-bold " />
             </a>
             </li>
@@ -24,7 +24,7 @@ export default function Footer() {
             </li>
             </ul>
         </div>
-        <p>&copy;2023 Aryan Kumar | All Rights Reserved</p>
+        <p className="text-xl text-center mt-4 font-bold mb-6">&copy;2023 Aryan Kumar | All Rights Reserved</p>
       </footer>
     </div>
   )

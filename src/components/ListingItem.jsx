@@ -13,6 +13,7 @@ export default function ListingItem({listing ,id , onEdit, onDelete}) {
       <img
           className="h-[170px] w-full  bg-contain hover:scale-105 transition-scale duration-200 ease-in" /* object-cover */
           loading="lazy"
+          alt=""
           src={listing.imgUrls[0]}
         />
         <Moment
